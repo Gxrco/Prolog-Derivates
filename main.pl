@@ -76,22 +76,6 @@ derivada(tan(U), X, (1 + tan(U) ^ 2) * DU) :-
 derivada(arctan(U), X, DU / (1 + U ^ 2)) :-
     derivada(U, X, DU).
 
-% Ejemplos de uso:
-% ?- derivada(ln(x/(x+1)),x,Y).
-% Y = (1*(x+1)-x*(1+0))/((x+1)^2/(x/(x+1))).
-
-% ?- derivada(sen(exp(3*x)),x,Y).
-% Y = cos(exp(3*x))*(exp(3*x)*(3*1)).
-
-% ?- derivada(ln(sen((x+1)/x)),x,Y).
-% Y = cos((x+1)/x)*(((1+0)*x-(x+1)*1)/x^2)/sen((x+1)/x).
-
-% ?- derivada((x^5+x^3)/(x^2+1),x,Y).
-% Y = ((5*x^4+3*x^2)*(x^2+1)-(x^5+x^3)*(2*x*1+0))/((x^2+1)^2).
-
-% ?- derivada(arctan((x^2+1)^10),x,Y).
-% Y = 10*(x^2+1)^9*(2*x*1+0)/(1+((x^2+1)^10)^2).
-
 % Meta para ejecutar los ejemplos
 run_examples :-
     derivada(ln(x/(x+1)), x, Y1),
